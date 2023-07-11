@@ -4,13 +4,13 @@ class BusStop:
         self.queue = []
 
 # help the queue get person from Person class
-    # def get_person(self, ):
-
-# get to know how many people are waiting at the queue
-    # get_queue_number
-
-# add a person to the queue
+    def add_to_queue(self, person):
+        self.queue.append(person)
 
 # remove all people from the queue
-    def remove_queue(self):
+    def clear(self):
         self.queue.clear()
+
+    def queue_length(self):
+        return len(self.queue)
+    

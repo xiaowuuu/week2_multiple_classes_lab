@@ -1,12 +1,14 @@
 class Bus:
-    def __init__(self, route_number, destination, drive_method):
+    def __init__(self, route_number, destination):
         self.route_number = route_number
         self.destination = destination
-        self.drive_method = drive_method
         self.passengers = []
 
+# drive method
+    def drive_method(self):
+        return "choo choo"        
 # return how many passengers are on the bus
-    def amount_of_passengers(self, passengers):
+    def passenger_count(self):
         return len(self.passengers)
 
 # take a person and append it to the passenger list
@@ -15,12 +17,12 @@ class Bus:
     
 # drop off a passenger and remove them from the list
     def drop_off(self, passenger_to_drop_off):
-        return self.passengers.remove(passenger_to_drop_off)
+        self.passengers.remove(passenger_to_drop_off)
     
 # remove all of the passengers
 # when the bus reaches the destination
 # or the bus breaks down
-    def remove_all_passengers(self):
+    def empty_bus(self):
         self.passengers.clear()
         
     def pick_up_from_stop(self, bus_stop):
